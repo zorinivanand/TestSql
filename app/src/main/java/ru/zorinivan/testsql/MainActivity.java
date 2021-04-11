@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -58,25 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             case R.id.buttonRead:
-                Cursor cursor = database.query(DBHelper.TABLE_CONTACTS,null,
-                        null,null,null,null,null);
-
-                if (cursor.moveToFirst()){
-                    int idIndex = cursor.getColumnIndex(DBHelper.KEY_ID);
-                    int nameIndex = cursor.getColumnIndex(DBHelper.KEY_NAME);
-                    int emailIndex = cursor.getColumnIndex(DBHelper.KEY_MAIL);
-                    do {
-                        Log.d("mLog","ID = "+cursor.getInt(idIndex)+
-                                ", name = "+cursor.getString(nameIndex)+
-                                ", email = "+cursor.getString(emailIndex));
-                    } while (cursor.moveToNext());
-                }else
-                    Log.d("mLog","0 rows");
-                System.out.println(Log.d("mLog","ID = "+cursor.getInt(idIndex)+
-                        ", name = "+cursor.getString(nameIndex)+
-                        ", email = "+cursor.getString(emailIndex)));
-
-                cursor.close();
+                Intent intent = new Intent(MainActivity.this, ActivityResult.class);
+                startActivity(intent);
                 break;
 
             case R.id.buttonClear:
