@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestSQL">
-        <activity android:name=".ActivityResult" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ActivityResult"
+            android:label="@string/title"/>
+        <activity android:name=".MainActivity"
+            android:label="@string/title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -3,4 +3,12 @@
     <string name="result">
 
     </string>
+    <string name="title">Write and Read</string>
+    <string name="read">READ</string>
+    <string name="add">ADD</string>
+    <string name="clear">CLEAR</string>
+    <string name="name">Input Name</string>
+    <string name="email">Input Email</string>
+
+
 </resources>
